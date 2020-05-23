@@ -1,0 +1,165 @@
+body {
+    font-family: 'Muli', sans-serif;
+    font-size: 18px;
+    color: #000000;
+}
+
+ul, li {
+    list-style: none;
+}
+
+a  {
+    text-decoration: none;
+    color: #000000;
+}
+
+.black {
+    color: #000000;
+}
+
+
+
+/* HEADER 
+============================== */
+
+.menu{
+padding: 32px 0;
+border-bottom: 1px solid #828282;
+font-weight: 700;
+}
+
+.menu__item a {
+    color: #828282;
+    transition: color 0.1s linear;
+}
+
+.menu__item--black a {
+    color: #000000;
+}
+
+.menu__item a:hover {
+    text-decoration: none;
+    color: #000000;
+}
+
+/* HOME 
+================================ */
+
+.home__title {
+    font-size: 47px;
+    font-weight: 700;
+}
+
+.home__text {
+    font-weight: 700;
+    text-align: center;
+}
+
+.home__lang {
+    position: relative;
+}
+
+.home__lang__item {
+    display: inline-block;
+    transform: rotate(-90deg);
+    position: absolute;
+    width: 100px;
+    right: -20px;
+    bottom: 10px;
+}
+
+.main__image {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    margin-top: 50px;
+}
+
+.main__image__item {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+}
+
+
+/* ABOUT ME
+========================== */
+.about__me__container {
+    background: #F6F6F6;
+    margin-top: 104px;
+    padding: 120px 0 107px;
+}
+
+.about__me {
+    max-width: 420px;
+}
+
+.about__me__title {
+    font-size: 34px;
+    font-weight: 700;
+}
+
+.about__me__text {
+    font-size: 18px;
+    margin: 17px 0 40px;
+}
+
+.about__me__text:last-child {
+    margin-bottom: 0;
+}
+
+/* SKILLS */
+
+.skills {
+    font-size: 34px;
+    font-weight: 700;
+    margin-top: 91px;
+}
+
+.skills__item {
+    margin-top: 80px;
+}
+
+.skills__item__icon {
+    width: 90px;
+    height: 90px;
+}
+
+.skills__item__title {
+    font-weight: 700;
+    color: #828282;
+    margin-top: 24px;
+}
+
+.skills__item__level {
+    margin-top: 30px;
+}
+
+.skill__item__level__star {
+    margin-right: 9px;
+}
+
+@media (max-width:767px) {
+    header {
+        display: none;
+    }
+
+    .main__image {
+        height: 200px;
+        margin-top: 10px;
+    }
+
+    .home {
+        margin-top: 30px;
+    }
+
+    .home__text {
+        text-align: left;
+    }
+
+    .about__me {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
