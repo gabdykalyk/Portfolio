@@ -12,6 +12,7 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Muli:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    
     <title>Hello, world!</title>
 </head>
 
@@ -26,33 +27,46 @@
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
 
+        <!-- JQuery -->
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("#navigation").on("click", "a", function (event) {
+                    event.preventDefault();
+                    var id = $(this).attr('href'),
+                        top = $(id).offset().top;
+                    $('body,html').animate({ scrollTop: top }, 1500);
+                });
+            });
+        </script>
+
     <!-- CONTAINER -->
     <div class="container container__main">
         <!-- HEADER -->
-        <header class="header">
-            <ul class="menu d-flex justify-content-between">
+        <header class="header" id="navigation">
+            <ul class="menu d-flex justify-content-between" >
                 <li class="menu__item menu__item--black">
-                    <a href="">
+                    <a href="#home">
                         Home
                     </a>
                 </li>
                 <li class="menu__item">
-                    <a href="">
+                    <a href="#about__me">
                         About me
                     </a>
                 </li>
                 <li class="menu__item">
-                    <a href="">
+                    <a href="#skills">
                         Skills
                     </a>
                 </li>
                 <li class="menu__item">
-                    <a href="">
+                    <a href="#portfolio">
                         Portfolio
                     </a>
                 </li>
                 <li class="menu__item">
-                    <a href="">
+                    <a href="#contacts">
                         Contacts
                     </a>
                 </li>
@@ -60,7 +74,7 @@
         </header>
 
         <!-- HOME -->
-        <div class="home">
+        <div class="home" id="home">
             <div class="row align-items-end">
                 <div class="col-xl-4 home__title">
                     Oral <br> Gabdykalyk
@@ -82,7 +96,7 @@
         </div>
     </div> <!-- CONTAINER -->
     <!-- ABOUT ME -->
-    <div class="container__fluid about__me__container">
+    <div class="container__fluid about__me__container" id="about__me">
         <div class="about__me m-auto text-center">
             <h1 class="about__me__title">About me</h1>
             <p class="about__me__text">Hi! My name is Oral and I am Front-end developer. I am also a Dentist.</p>
@@ -93,7 +107,7 @@
         </div>
     </div>
     <!-- SKILLS -->
-    <div class="container container__main">
+    <div class="container container__main " id="skills">
         <h1 class="skills text-center">Skills</h1>
         <div class="row">
             <div class="col-lg-3">
@@ -228,8 +242,8 @@
         </div>
     </div>
     <!-- PORTFOLIO -->
-    <div class="container__fluid about__me__container about__me__container--nopadding">
-        <div class="about__me m-auto text-center">
+    <div class="container__fluid about__me__container about__me__container--nopadding" >
+        <div class="about__me m-auto text-center" id="portfolio">
             <h1 class="about__me__title">Portfolio</h1>
         </div>
         <div class="container container__main">
@@ -269,8 +283,8 @@
         </div>
     </div> <!-- CONTAINER -->
     <!-- CONTACTS -->
-    <div class="container contacts">
-        <div class="contacts text-center">
+    <div class="container contacts" >
+        <div class="contacts text-center"  id="contacts">
             <h1 class="contacts__title">
                 Contacts
             </h1>
@@ -284,7 +298,7 @@
                 </div>
             </a>
             <div class="row social__box justify-content-center">
-                <div class="col-1 social">
+                <div class="social">
                     <a target="_blank" href="https://t.me/gabdykalyk">
                         <img class="social__item" src="./social/telegram.svg" alt="">
                     </a>
